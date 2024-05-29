@@ -14,8 +14,6 @@ Future functions should possibly include:
 
 # Installation and requirements
 
-## Requirements:
-
 1.	**Python**: Ensure that Python is installed on the system. You can download it from [python](www.python.org).
    
 2.	**Pandas**: Install the Pandas library for data manipulation. Open your command line (e.g. Terminal) and type:
