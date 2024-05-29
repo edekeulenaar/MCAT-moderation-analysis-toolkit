@@ -23,7 +23,7 @@ and more.
 
       ```pip install selenium```
   	
-4.	**BeautifulSoup4**: Although not used in your script, it’s good to have for any future HTML parsing. Open your command line (e.g. Terminal) and type:
+4.	**BeautifulSoup4** for HTML parsing. Open your command line (e.g. Terminal) and type:
 
       ```pip install beautifulsoup4```
 
