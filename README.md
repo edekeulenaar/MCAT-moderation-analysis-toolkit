@@ -7,7 +7,7 @@ Current scripts use Selenium to collect moderation statuses from Facebook, Insta
 Future functions should include: 
 - Collecting and analysing platform policies from the Platform Governance Archive (v. 1 and 2) and other datasets from peer-reviewed research;
 - Verifying if a search term is labelled or banned by TikTok;
-- Getting tweet and other post rankings for a given search;
+- Getting tweet and other post search rankings to study demotion;
 
 and more.
 
