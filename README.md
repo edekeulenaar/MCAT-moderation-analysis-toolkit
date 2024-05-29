@@ -1,6 +1,6 @@
-# MCAT
+# MCAT: Moderation capture and analysis toolkit
 
-MCAT (Moderation Capture and Analysis Toolkit) is a collection of Python functions that collect and analyse platform moderation policies and practices. 
+MCAT is a collection of Python functions that collect and analyse platform moderation policies and practices. 
 
 Current scripts use Selenium to collect moderation statuses from Facebook, Instagram and YouTube posts listed in a local CSV. Moderation statuses include "This post is not available" or "This post has been removed for [x] policy infringement." As they are scrapers, these scripts are subjet to very frequent changes -- so please do expect errors.
 
