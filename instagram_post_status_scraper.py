@@ -82,7 +82,7 @@ def process_folder(folder_path):
 def main():
     # Specify the mode and path directly in the script
     mode = 'folder'  # Change to 'file' if processing a single file
-    path = '/Users/edekeulenaar/Projects/PhDs/PhD 2020-2025/Datasets 🧮 /Infodemic/us election 2020/Instagram'  # Update this to your specific file or folder path
+    path = '/path/to/your/file/or/folder/here'  # Update this to your specific file or folder path. On MacOS, select a file or folder in the Finder and press the option-key while right-clicking and choose Copy "selected item" as pathname.
 
     if mode == 'file':
         src_path = path
