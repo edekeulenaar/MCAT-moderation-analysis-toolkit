@@ -39,6 +39,8 @@ and more.
 
 Once you're set up, specify the path to your CSV and whether you'd like the script to process all CSVs from a folder or just one file. Please modify the script where indicated by comments (a comment looks like this: "# [comment]"). 
 
-# Credits
+# Credits and citing
 
-Modules and methods have been co-developed by Open Intelligence Lab folk (Ivan Kisjes and myself), Frank Anemaet, and a little help from gpt-4o. Methods originate from: de Keulenaar, E. and Rogers, R. (2024) ‘After deplatforming: the return of trace research for the study of platform effects’, in T. Venturini et al. (eds) The SAGE Handbook of Data and Society: An Interdisciplinary Reader in Critical Data Studies. London: SAGE (to be published in June of 2024).
+Modules and methods have been co-developed by Open Intelligence Lab folk (Ivan Kisjes and myself), Frank Anemaet, and a little help from gpt-4o. 
+
+Methods originate from: de Keulenaar, E. and Rogers, R. (2024) ‘After deplatforming: the return of trace research for the study of platform effects’, in T. Venturini et al. (eds) The SAGE Handbook of Data and Society: An Interdisciplinary Reader in Critical Data Studies. London: SAGE (to be published in June of 2024). **Please cite this piece when/if using any of these scripts**. 
