@@ -2,9 +2,7 @@
 
 MCAT (Moderation Capture and Analysis Toolkit) is a collection of Python functions that collect and analyse platform moderation policies and practices. 
 
-Current scripts use Selenium to collect moderation statuses from Facebook, Instagram and YouTube posts listed in a local CSV. Moderation statuses include "This post is not available" or "This post has been removed for [x] policy infringement." As they are scrapers, these scripts are subjet to very frequent changing -- so please do expect errors.
-
-Just specify the path to your CSV and whether you'd like the script to process all CSVs from a folder or just one file. Please modify the script where indicated by comments (a comment looks like this: "# [comment]"). 
+Current scripts use Selenium to collect moderation statuses from Facebook, Instagram and YouTube posts listed in a local CSV. Moderation statuses include "This post is not available" or "This post has been removed for [x] policy infringement." As they are scrapers, these scripts are subjet to very frequent changes -- so please do expect errors.
 
 Future functions should include: 
 - Collecting and analysing platform policies from the Platform Governance Archive (v. 1 and 2) and other datasets from peer-reviewed research;
@@ -38,6 +36,8 @@ and more.
 8.	**Chrome** (if not already installed). Download it from your browser or open your command line (e.g. Terminal) and type:
 
       ```brew install --cask google-chrome```
+
+Once you're set up, specify the path to your CSV and whether you'd like the script to process all CSVs from a folder or just one file. Please modify the script where indicated by comments (a comment looks like this: "# [comment]"). 
 
 # Credits
 
