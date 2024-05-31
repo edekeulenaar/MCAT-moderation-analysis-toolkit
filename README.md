@@ -51,9 +51,9 @@ Once you're set up, specify the path to your CSV and whether you'd like the scri
 
 # Methods
 
-Modules and methods have been co-developed by Open Intelligence Lab folk (Ivan Kisjes and myself), Frank Anemaet, and a little help from gpt-4o. 
+Methods and scripts have been written, brainstormed or appeared in Lao Tzu-like dreams of members of Open Intelligence Lab and the Digital Methods Initiative, collaborators from various universities (PUC Rio, Sciences Po Média Lab), Frank Anemaet, and a little help from gpt-4o. 
 
-Methods originate from: 
+Methods originate (but are not exclusive to): 
 
 ```
 de Keulenaar, E. and Rogers, R. (2024) ‘After deplatforming: the return of trace research for the study of platform effects’, in T. Venturini et al. (eds) The SAGE Handbook of Data and Society: An Interdisciplinary Reader in Critical Data Studies. London: SAGE (to be published in June of 2024).
