@@ -51,7 +51,7 @@ Once you're set up, specify the path to your CSV and whether you'd like the scri
 
 # Methods
 
-Methods and scripts have been written, brainstormed or appeared in Lao Tzu-like dreams of members of Open Intelligence Lab and the Digital Methods Initiative, collaborators from various universities (PUC Rio, Sciences Po Média Lab), Frank Anemaet, and a little help from gpt-4o. 
+Methods and scripts have been written, brainstormed or appeared in Lao Tzu-like dreams of members of Open Intelligence Lab and the Digital Methods Initiative, collaborators from various universities (University of Groningen, University of Bremen, PUC Rio, Sciences Po Média Lab), Frank Anemaet, and a little help from gpt-4o. 
 
 Methods originate (but are not exclusive to): 
 
