@@ -11,7 +11,7 @@ Future functions should include:
 
 and more.
 
-# Installation and requirements
+# What you need to install to get post status scrapers running
 
 1.	**Python**: Ensure that Python is installed on the system. You can download it from [python](www.python.org).
    
