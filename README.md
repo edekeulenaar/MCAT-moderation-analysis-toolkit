@@ -108,13 +108,13 @@ or run it with your local script editor.
 
 Methods and scripts have been written, brainstormed, or appeared in Lao Tzu-like dreams of members of Open Intelligence Lab and the Digital Methods Initiative, collaborators from various universities (University of Groningen, University of Bremen, PUC Rio, Sciences Po Média Lab), Frank Anemaet, and a little help from GPT-4.
 
-### Origin of Methods
+Current scripts follow the workflow described in this chapter: 
 
 ```
 de Keulenaar, E. and Rogers, R. (2024) ‘After deplatforming: the return of trace research for the study of platform effects’, in T. Venturini et al. (eds) The SAGE Handbook of Data and Society: An Interdisciplinary Reader in Critical Data Studies. London: SAGE (to be published in June of 2024).
 ```
 
-**Please cite this piece when using any of these scripts**.
+**Please cite this chapter when using any of these scripts**.
 
 The majority of moderation policies available in the "Content moderation policies" folder have been made available by the Open Terms Archive and the Platform Governance Archive(s), the latter of which is maintained by the University of Bremen. Please cite them when using policies tagged as "PGA" as follows:
 
