@@ -56,10 +56,10 @@ Specify the path to your CSV and whether you'd like the script to process all CS
 
 Execute the script with Python in your Terminal or other command line:
 
-    ```
-    python textdiff_calculator.py
-    ```
-
+```
+python textdiff_calculator.py
+```
+    
 or run it with your local script editor. 
 
 ## TextDiff Calculator
@@ -98,9 +98,9 @@ This script calculates the absolute and relative text differences between rows i
 
 Execute the script with Python in your Terminal or other command line:
 
-    ```
-    python textdiff_calculator.py
-    ```
+```
+python textdiff_calculator.py
+```
     
 or run it with your local script editor. 
 
