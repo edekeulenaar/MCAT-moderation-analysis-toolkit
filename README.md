@@ -106,7 +106,7 @@ or run it with your local script editor.
 
 ## Methods
 
-Methods and scripts have been developed by Ivan Kisjes, Emillie de Keulenaar and Frank Anamaet; members of the Open Intelligence Lab & Digital Methods Initiative at the universities of Amsterdam and Groningen; collaborators from various universities (University of Groningen's Centre for Media and Journalism Studies, University of Bremen, PUC Rio, Sciences Po Média Lab); and a little help from GPT-4.
+Methods and scripts have been developed by Ivan Kisjes, Emillie de Keulenaar and Frank Anemaet; members of the Open Intelligence Lab & Digital Methods Initiative at the universities of Amsterdam and Groningen; collaborators from various universities (University of Groningen's Centre for Media and Journalism Studies, University of Bremen, PUC Rio, Sciences Po Média Lab); and a little help from GPT-4.
 
 Current scripts follow the workflow described in this chapter. **Please cite this chapter when using this repo**.
 
