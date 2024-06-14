@@ -1,7 +1,11 @@
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import shutil
 from datetime import datetime
@@ -47,49 +51,62 @@ def process_file(src_path, dest_path):
     if 'driver' not in df.columns:
         df['driver'] = ''
 
-    def check_class_on_page(url, class_name):
-    # Set up the WebDriver (assuming using Chrome)
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run headless Chrome to not open a window
-    driver_path = '/usr/local/bin/chromedriver'  # Specify the path to your ChromeDriver
-
-    driver = webdriver.Chrome(executable_path=driver_path, options=chrome_options)
-
-    try:
-        driver.get(url)
-        time.sleep(3)  # Wait for the page to load completely
-
+    def check_class_on_page(driver, url, class_name):
         try:
-            elements = driver.find_elements(By.CSS_SELECTOR, class_name)
-            if elements:
+            driver.get(url)
+            try:
+                elements = WebDriverWait(driver, 10).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, class_name))
+                )
                 texts = []
                 for element in elements:
                     inner_html = element.get_attribute('innerHTML')
                     soup = BeautifulSoup(inner_html, 'html.parser')
                     text = ' '.join(soup.stripped_strings)  # Extract all natural language text
                     texts.append(text)
-                return ' '.join(texts)
-            else:
-                return "Online"
+                return ' '.join(texts) if texts else "Online"
+            except Exception as e:
+                return f"Online"
         except Exception as e:
-            return f"Class not found or error: {e}"
-    finally:
-        driver.quit()
+            return str(e)
 
-    # Process each URL and save results
+    # Set up the WebDriver (assuming using Chrome)
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Run headless Chrome to not open a window
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    driver_path = 'path/to/your/chromedriver'  # Specify the path to your ChromeDriver
+    service = Service(driver_path)
+
     current_date = datetime.now().strftime("%Y-%m-%d")
 
-    for index, row in df.iterrows():
-        url = row['URL']
-        result = check_class_on_page(url, '.xzueoph.x1k70j0n')
-        df.at[index, 'Status'] = result
-        df.at[index, 'Date scraped'] = current_date
-        df.at[index, 'driver'] = 'Chrome'
-        print(f"Processed URL: {url}, Result: {result}")  # Debugging statement to ensure processing
+    print('Running... 🏃')
 
-        # Save the updated DataFrame to the CSV file immediately
-        df.to_csv(dest_path, index=False, sep=delimiter)
+    # Function to process each row
+    def process_row(index, row):
+        driver = webdriver.Chrome(options=chrome_options)
+        try:
+            url = row['URL']
+            result = check_class_on_page(driver, url, '.xzueoph.x1k70j0n')
+            df.at[index, 'Status'] = result
+            df.at[index, 'Date scraped'] = current_date
+            df.at[index, 'driver'] = 'Chrome'
+            print(f"Processed URL: {url}, Result: {result}")  # Debugging statement to ensure processing
+        finally:
+            driver.quit()
 
+    print("I don't know where I'm runnin' now, I'm just runnin' on")
+    print("runnin' on empty")
+    print("Runnin' on, runnin' into the sun")
+    print("But I'm runnin' behind")
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(process_row, index, row) for index, row in df.iterrows()]
+        for future in as_completed(futures):
+            future.result()  # to raise any exceptions
+
+    # Save the updated DataFrame to the CSV file
+    df.to_csv(dest_path, index=False, sep=delimiter)
     print(f"Processing complete. Results saved to {dest_path}")
 
 def process_folder(folder_path):
@@ -102,8 +119,8 @@ def process_folder(folder_path):
 
 def main():
     # Specify the mode and path directly in the script
-    mode = 'folder'  # Change to 'file' if processing a single file
-    path = '/path/to/your/file/or/folder/here'  # Update this to your specific file or folder path. On MacOS, select a file or folder in the Finder and press the option-key while right-clicking and choose Copy "selected item" as pathname.
+    mode = 'file'  # Write 'folder' if you're processing a folder or 'file' if you're processing a file. 
+    path = 'path/to/your/file/or/folder'  # Update this to your specific file or folder path. On MacOS, select a file or folder in the Finder and press the option-key while right-clicking and choose Copy "selected item" as pathname.
 
     if mode == 'file':
         src_path = path
