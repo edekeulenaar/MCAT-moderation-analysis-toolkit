@@ -8,7 +8,6 @@ class tweetStatusFinder:
     def __init__(self):
         self.driver = webdriver.Chrome()
 
-
     def checkTweet(self, tweetId):
         self.driver.get('https://x.com/DonaldJTrumpJr/status/%s' % tweetId)
         time.sleep(3)
@@ -24,9 +23,9 @@ class tweetStatusFinder:
         self.driver.close()
 
 if __name__ == "__main__":
-    tweetids = ['1324425447548047361', '1792963675097313565']
+    tweetids = ['1324425447548047361', '1792963675097313565'] # place the IDs of the tweets/posts you'd like to get the status from between commas and quotation marks
     
-    outfile="test.csv"
+    outfile="test.csv" # Name your output file
     
     statusFinder=tweetStatusFinder()
     
